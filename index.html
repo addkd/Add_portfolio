@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background: #f8f9fa; margin: 0; padding: 0; display: flex; height: 100vh; overflow: hidden; }
+        .sidebar { width: 220px; background: #222; color: white; position: fixed; height: 100vh; padding: 30px 30px; text-align: left; display: flex; flex-direction: column; align-items: center; box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); justify-content: start; transition: 0.3s; }
+        .sidebar .profile-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 10px; }
+        .sidebar .profile-img { width: 100px; height: 100px; border-radius: 50%; border: none; object-fit: cover; margin-bottom: 5px; }
+        .sidebar nav { margin-top: 15px; display: flex; flex-direction: column; align-items: center; }
+        .sidebar a { display: block; color: white; text-decoration: none; padding: 4px 0; font-size: 0.8em; font-weight: 400; width: 100%; text-align: center; transition: 0.3s; }
+        .sidebar a:hover { background: #444; border-radius: 10px; }
+        .social-links-sidebar { display: flex; flex-direction: column; align-items: center; margin-top: auto; gap: 3px; padding-bottom: 50px; }
+        .social-links-sidebar a { text-decoration: none; font-size: 0.9em; color: #bbb; transition: 0.3s; display: flex; align-items: center; gap: 5px; }
+        .social-links-sidebar a:hover { color: #fff; }
+        
+        .content { 
+            margin-left: 250px; 
+            text-align: center; 
+            flex-grow: 1; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            transition: 0.5s; 
+        } 
+        h2 { 
+            font-size: 2em; /* 프로필 글씨 크기 유지 */
+            color: #222; 
+            position: absolute; 
+            top: 10%;  
+            transform: translateY(-50%);
+        }
+        .content-items {
+            margin-top: 50px; /* 프로필 아래 요소들 더 많이 아래로 이동 */
+        }
+        .profile-img { 
+            width: 150px; 
+            height: 150px; 
+            border-radius: 50%; 
+            margin-bottom: 10px; 
+            object-fit: cover; 
+        }
+        h1 { font-size: 1.6em; color: #222; margin: 5px 0; }
+        p { font-size: 0.8em; color: #555; margin: 6px 0; }
+        .button { display: inline-block; padding: 12px 24px; background: #222222; color: white; font-size: 1em; border-radius: 25px; text-decoration: none; margin-top: 10px; transition: all 0.3s ease-in-out; font-weight: bold; }
+        .button:hover { background: #444444; transform: scale(1.05); }
+
+        @media (max-width: 768px) {
+            .sidebar { width: 180px; padding: 30px 20px; }
+            .content { margin-left: 200px; }
+        }
+
+        @media (max-width: 480px) {
+            body { flex-direction: column; overflow: auto; height: auto; }
+            .sidebar { width: 100%; height: auto; padding: 20px; position: relative; flex-direction: row; justify-content: space-around; }
+            .content { margin-left: 0; padding: 20px; }
+            .social-links-sidebar { flex-direction: row; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile-container">
+            <img src="영애오너.png" alt="" class="profile-img">
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="portfolio.html">portfolio</a>
+            <a href="#">연락처</a>
+        </nav>
+        <div class="social-links-sidebar">
+            <a href="#"><i class="fas fa-envelope"></i> Email</a>
+            <a href="#"><i class="fab fa-x-twitter"></i> X</a>
+        </div>
+    </div>
+    <div class="content">
+        <h2>profile</h2> 
+        <div class="content-items">
+            <img src="영애오너.png" alt="프로필 사진" class="profile-img">
+            <h1>ADD</h1>
+            <p>좋아하는 걸 그리고 좋아하는 걸 합니다.</p>
+            <a href="portfolio.html" class="button">portfolio</a>
+        </div>
+    </div>
+</body>
+</html>
